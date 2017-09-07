@@ -3,26 +3,43 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{needspace}
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\sffamily\footnotesize}
+
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\makeindex[intoc]
 
 
 
-\newcommand{\overview}[3] 
-{
-#1
+\newenvironment{overview}[3][]{
+  \needspace{10\baselineskip}
+  \begin{center}
+    { \renewcommand\textsuperscript[1]{}
+      \phantomsection\addcontentsline{toc}{section}
+      {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
+    }
+    {{\large\bfseries #2}\marginnote{#1}\par}
+    \medskip
+    {#3\par}
+    \smallskip
 
-#2
-
-#3
-  \clearpage
+    
+  {%
+  \bigskip
+  \hrule
+  \bigskip
+  }
+  
+  \end{center}
 }
-  
-  
   
 \begin{document}
 
 
 
-\overview{Cinzia Anita Maria Progida}{2D or not 2D: Dimensional and mechanical cues in cell migration.}{The movement of cells within the body, or cell migration, is fundamental for both physiological and
+\overview{2D or not 2D: Dimensional and mechanical cues in cell migration.}{Cinzia Anita Maria Progida}{The movement of cells within the body, or cell migration, is fundamental for both physiological and
 pathological processes including wound healing, immune response and cancer metastasis. Cell
 motility involves the reorganization of the cytoskeleton and the movement of organelles, usually
 triggered by external cues. Indeed, cells respond to biochemical or mechanical stimuli by activating
@@ -44,8 +61,7 @@ cells on their environment using micropillars.
 
 
 
-\overview{Liesbeth M. C. Janssen,
-Theory of Polymers and Soft Matter, Department of Applied Physics, TU Eindhoven, The Netherlands}{Membrane formation and compartmentalization in synthetic active matter}{
+\overview{Membrane formation and compartmentalization in synthetic active matter}{Liesbeth M. C. Janssen}{
 
 Active matter refers to systems whose constituent agents can move autonomously through the
 consumption of energy. Such materials exhibit rich non-equilibrium dynamics and provide a framework
@@ -57,20 +73,20 @@ motility field. We thus show that a minimal artificial active-matter system can 
 structures reminiscent of biological patterns. Our predictions may be verified experimentally in e.g.
 vibrated granular matter and other dry active systems with a spatially dependent self-propulsion speed.
 
-
+\small{
 Reference: J. Grauer, H. Löwen, and L.M.C. Janssen, Spontaneous membrane formation and self-
-encapsulation of active rods in an inhomogeneous motility field, arXiv:1707.03405.
+encapsulation of active rods in an inhomogeneous motility field, arXiv:1707.03405.}
 }
 
 
-\overview{Margarita Staykova}{
+\overview{
 Mechanics of the cell interface studied by supported lipid bilayers
-}{ The cell membrane undergoes complex morphological and surface area transformations while being confined to an underlying actin cortex, the membranes of neighboring cells or other extracellular structures. To understand the role of confinement in the membrane processes we adhere synthetic lipid bilayers to artificial substrates and subject them to perturbations that are common to the cell membrane - 1) substrate area changes, or 2) intake of extra lipids. Our results show that confined lipid bilayers regulate the arising changes in their lipid density either by the expulsion and absorption of lipid protrusions, such as tubes and vesicles, or by sliding over the substrate. Similar processes have been recently confirmed in living cells. We provide a theoretical framework that rationalizes the membrane behavior in terms of the membrane elasticity, and the adhesion and hydrodynamic interactions between the membrane and the substrate. 
+}{Margarita Staykova}{ The cell membrane undergoes complex morphological and surface area transformations while being confined to an underlying actin cortex, the membranes of neighboring cells or other extracellular structures. To understand the role of confinement in the membrane processes we adhere synthetic lipid bilayers to artificial substrates and subject them to perturbations that are common to the cell membrane - 1) substrate area changes, or 2) intake of extra lipids. Our results show that confined lipid bilayers regulate the arising changes in their lipid density either by the expulsion and absorption of lipid protrusions, such as tubes and vesicles, or by sliding over the substrate. Similar processes have been recently confirmed in living cells. We provide a theoretical framework that rationalizes the membrane behavior in terms of the membrane elasticity, and the adhesion and hydrodynamic interactions between the membrane and the substrate. 
 }
 
 
 
-\overview{Alexandra K. Diem}{The role of biomechanical modelling in discovering the brain’s lymphatic system}{How does the human brain eliminate waste products? This simple yet crucial question has
+\overview{The role of biomechanical modelling in discovering the brain’s lymphatic system}{Alexandra K. Diem}{How does the human brain eliminate waste products? This simple yet crucial question has
 occupied medical research for decades, in particular with regards Alzheimer's disease,
 whose onset is closely associated with a failure to remove the cerebral waste product
 amyloid-$\beta$ (A$\beta$). Analytical and numerical modelling of the biomechanical processes
@@ -84,17 +100,17 @@ require fully interdisciplinary scientists working side-by- side with experiment
 and taking into account the multiple scales involved in the cerebral waste transport
 processes in the human brain.}
 
-\overview{Professor M\'ar M\'asson}{}{}
+\overview{}{Professor M\'ar M\'asson}{}
 
 
-\overview{ MASSIERA Gladys}{Biophysical approach of the mucociliary function: Mucus rheology and beating coordination}{The mucociliary function of the bronchial epithelium ensures the continuous clearance of the respiratory system, which relies on two main elements: mucus and cilia beating coordination.
+\overview{Biophysical approach of the mucociliary function: Mucus rheology and beating coordination}{ MASSIERA Gladys}{The mucociliary function of the bronchial epithelium ensures the continuous clearance of the respiratory system, which relies on two main elements: mucus and cilia beating coordination.
 We perform here a rheological characterization of mucus samples extracted from ALI (Air-liquid interface) cultures of bronchial epithelium. Our approach combines  macro- and micro-rheology techniques with the aim of quantifying the mucus viscoelastic properties at different length scales (from the size of bronchial cilia up to the scale on which mucus is transported)
 }
 
 
 
 
-\overview{Susanne Liese}{Hydration Effects Turn a Highly Stretched Polymer from an Entropic into an Energetic Spring}{
+\overview{Hydration Effects Turn a Highly Stretched Polymer from an Entropic into an Energetic Spring}{Susanne Liese}{
 Polyethylene glycol (PEG) is a structurally simple and nontoxic water-soluble polymer
 that is widely used in medical and pharmaceutical applications as molecular linker
 and spacer. In such applications, PEG’ s elastic response against conformational
@@ -114,8 +130,8 @@ mechanics of macromolecules and constitute a case example that sheds light on th
 antagonistic interplay of conformational and hydration degrees of freedom.}
 
 
-\overview{Klas Pettersen}{Transport of nutrients and clearance of waste products through the tiny
-spaces surrounding brain cells}{Transport of nutrients and clearance of waste products are
+\overview{Transport of nutrients and clearance of waste products through the tiny
+spaces surrounding brain cells}{Klas Pettersen}{Transport of nutrients and clearance of waste products are
 prerequisites for healthy brain function. The brain lacks lymph vessels and must
 rely on other mechanisms for clearance of waste products, including
 amyloid $\beta$ that may form pathological aggregates if not effectively cleared. It is
@@ -132,24 +148,25 @@ along vessels is likely to substitute for the lymphatic drainage system in other
 organs.
 
 
-[1] Holter KE, Kehlet B, Devor A, Sejnowski TJ, Dale AM, Omholt SW, Ottersen OP,
+\small{[1] Holter KE, Kehlet B, Devor A, Sejnowski TJ, Dale AM, Omholt SW, Ottersen OP,
 Nagelhus EA, Mardal K-A and Pettersen KH (2017). Interstitial solute transport
 in 3D reconstructed neuropil occurs by diffusion rather than bulk flow.
 Proceedings of the National Academy of Sciences, 6, 201706942.
-http://doi.org/10.1073/pnas.1706942114
+http://doi.org/10.1073/pnas.1706942114}
 }
 
-\overview{Professor Raymond E. Goldstein}{Upside-Down and Inside-Out: The Biomechanics of Cell Sheet Folding}{}
+\overview{Upside-Down and Inside-Out: The Biomechanics of Cell Sheet Folding}{Professor Raymond E. Goldstein}{The mucociliary function of the bronchial epithelium ensures the continuous clearance of the respiratory system, which relies on two main elements: mucus and cilia beating coordination.
+We perform here a rheological characterization of mucus samples extracted from ALI (Air-liquid interface) cultures of bronchial epithelium. Our approach combines  macro- and micro-rheology techniques with the aim of quantifying the mucus viscoelastic properties at different length scales (from the size of bronchial cilia up to the scale on which mucus is transported).}
 
 
-\overview{Guillaume Salbreux}{Physics of epithelial folding}{  
+\overview{Physics of epithelial folding}{Guillaume Salbreux}{  
 Three-dimensional deformations of epithelia play a fundamental role in tissue morphogenesis. The shape of an epithelium is determined by mechanical stresses acting within the tissue cells and from the outside environment. Here we introduce a three-dimensional vertex model which allows to represent the shape of a tissue in three dimensions by a set of vertices. In the model, the motion of vertices is set by apical, lateral and basal surface and line tensions, as well as intracellular pressures and external forces. Using this framework, we discuss how patterned force generation in an epithelium can drive biological tissue folding in fold formation in the Drosophila wing disc and in pancreatic tumour formation.}
 
 
-\overview{Gazzola, Mattia}{Computational design of artificial creatures}{We introduce an inverse design approach based on minimal theoretical modeling, direct numerical simulations and artificial intelligence for the investigation of animal locomotion. We will mostly focus on aquatic and terrestrial limbless creatures and discuss the identification of optimal swimming gaits and morphologies, as well as the design of cyborg creatures.}
+\overview{Computational design of artificial creatures}{Gazzola, Mattia}{We introduce an inverse design approach based on minimal theoretical modeling, direct numerical simulations and artificial intelligence for the investigation of animal locomotion. We will mostly focus on aquatic and terrestrial limbless creatures and discuss the identification of optimal swimming gaits and morphologies, as well as the design of cyborg creatures.}
 
 
-\overview{Aslak Tveito}{A cell-based framework for numerical modeling of electrical conduction in cardiac tissue}{In every heartbeat, an electrical wave traverses the entire heart muscle, and in every heart cell,
+\overview{A cell-based framework for numerical modeling of electrical conduction in cardiac tissue}{Aslak Tveito}{In every heartbeat, an electrical wave traverses the entire heart muscle, and in every heart cell,
 this wave sets off an action potential that increases the transmembrane potential of the cell.
 This leads to the release of large amounts of calcium from internal storage structures of the cell.
 Increased cytosolic calcium concentration, in turn, leads to contraction of the cells, and the well
@@ -186,7 +203,10 @@ small number of cells.}
 
 
 \overview{}{}{}
+
 \overview{}{}{}
+
+
 \overview{}{}{}
 
 \end{document}

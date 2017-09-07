@@ -11,7 +11,16 @@
 \usepackage{hyperref}
 \makeindex[intoc]
 
-
+\usepackage{background}
+\usepackage{blindtext}
+\backgroundsetup{
+scale=1,
+angle=34,
+opacity=0.4,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = red!35,middle color = red!25, right color = white] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}}
+}
 
 \newenvironment{overview}[3][]{
   \needspace{10\baselineskip}
@@ -36,7 +45,7 @@
 }
   
 \begin{document}
-
+\includegraphics[scale=0.3]{mat-mn-navn-eng.eps} 
 
 
 \overview{2D or not 2D: Dimensional and mechanical cues in cell migration.}{Cinzia Anita Maria Progida}{The movement of cells within the body, or cell migration, is fundamental for both physiological and

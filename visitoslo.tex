@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{needspace}
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\sffamily\footnotesize}
+
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\makeindex[intoc]
+\usepackage{wrapfig}
+\usepackage{background}
+\usepackage{graphicx}
+\usepackage{sidecap}
+
+\backgroundsetup{
+scale=1,
+angle=34,
+opacity=0.4,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = red!35,middle color = red!25, right color = white,rotate=1] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = white,middle color = blue!10, right color = blue!20,rotate=13] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = white,middle color = yellow!10, right color = white ,rotate=-13] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}}
+}
+\newenvironment{overview}[3][]{
+  \needspace{10\baselineskip}
+  \begin{center}
+    { \renewcommand\textsuperscript[1]{}
+      \phantomsection\addcontentsline{toc}{section}
+      {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
+    }
+    {{\large\bfseries #2}\marginnote{#1}\par}
+    \medskip
+    {#3\par}
+    \smallskip
+
+    
+  {%
+  \bigskip
+  \hrule
+  \bigskip
+  }
+  
+  \end{center}
+}
+
+
+\title{What to do in Oslo ? }
+\begin{document}
+\includegraphics[scale=0.3]{mat-mn-navn-eng.eps} 
+
+
+\begin{center}
+\section*{What to do in Oslo ?}
+In Oslo there are many different places that offer a good time, and we will now present a few these sites : 
+
+
+\end{center}
+
+
+\section*{Vigeland Sculpture Park} 
+\begin{wrapfigure}[]{r}{0.5\textwidth}
+    \centering
+    \includegraphics[angle=90,width=0.4\textwidth]{monolith.jpg}% 
+     \caption{The monolith sculpute in the Park. Picture taken from wikipedia. }
+\end{wrapfigure}
+
+The Vigeland Park is the world's largest sculpture park made by a single artist, and is one of Norway's most popular tourist attractions. The unique sculpture park is Gustav Vigeland's lifework with more than 200 sculptures in bronze, granite and wrought iron. 
+
+
+
+
+
+
+\section*{Oslo Opera House}
+The opera house in Oslo was completed in 20.. and has become an unique attraction to Oslo. This is due to the architecture, which allows you to venture freely on opera house.
+
+
+It lies in 
+
+
+giving a view of the Oslo fjord. 
+
+
+( Snohetta)
+
+
+
+\section*{Grunerløkka}
+
+
+
+\section*{Akershus Fortress}
+
+
+\section*{Karl Johans gate}
+
+
+\end{document}

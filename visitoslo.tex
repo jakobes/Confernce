@@ -6,15 +6,17 @@
 \usepackage{needspace}
 \usepackage{marginnote}
 \renewcommand*{\marginfont}{\sffamily\footnotesize}
-
+\usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{imakeidx}
 \usepackage{hyperref}
 \makeindex[intoc]
 \usepackage{wrapfig}
 \usepackage{background}
+\usepackage{caption}
 \usepackage{graphicx}
 \usepackage{sidecap}
-
+\usepackage{color}
 \backgroundsetup{
 scale=1,
 angle=34,
@@ -50,6 +52,8 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 }
 
 
+\newcommand{\mlcr}[4]{\multicolumn{#1}{#4}{\multirow{#2}{*}{#3}}}
+
 \title{What to do in Oslo ? }
 \begin{document}
 \includegraphics[scale=0.3]{mat-mn-navn-eng.eps} 
@@ -61,44 +65,39 @@ In Oslo there are many different places that offer a good time, and we will now 
 
 
 \end{center}
-
-
-\section*{Vigeland Sculpture Park} 
-\begin{wrapfigure}[]{r}{0.5\textwidth}
+\begin{wrapfigure}[20]{r}{0.5\textwidth}
     \centering
-    \includegraphics[angle=90,width=0.4\textwidth]{monolith.jpg}% 
+    \captionsetup{width=0.4\textwidth}
+    \includegraphics[angle=90,scale=0.1]{monolith.jpg}% 
      \caption{The monolith sculpute in the Park. Picture taken from wikipedia. }
 \end{wrapfigure}
 
+\section*{Vigeland Sculpture Park} 
+
 The Vigeland Park is the world's largest sculpture park made by a single artist, and is one of Norway's most popular tourist attractions. The unique sculpture park is Gustav Vigeland's lifework with more than 200 sculptures in bronze, granite and wrought iron. 
 
-
-
+\vspace{2cm}
+\begin{wrapfigure}[20]{l}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{operahouse.jpg}% 
+     \caption{The monolith sculpute in the Park. Picture taken from wikipedia. }
+\end{wrapfigure}
 
 
 
 \section*{Oslo Opera House}
-The opera house in Oslo was completed in 20.. and has become an unique attraction to Oslo. This is due to the architecture, which allows you to venture freely on opera house.
+The opera house in Oslo was opened in 2008 and has become an unique attraction. 
+You can venture around the opera roof, which gives you an amazing view of the Oslo fjord. 
 
-
-It lies in 
-
-
-giving a view of the Oslo fjord. 
-
-
-( Snohetta)
-
-
+The opera house is located .. walk from the Oslo central station, 
 
 \section*{Grunerløkka}
 
 
+{\color{red}
+Former factory district turned fashion hub, with laid-back cafes and galleries galore, Grünerløkka is a colourful mix of old and new decor. Independent boutiques and design shops showcase Oslo’s more alternative side, with 19th-century buildings serving as a picturesque backdrop. }
 
-\section*{Akershus Fortress}
 
-
-\section*{Karl Johans gate}
 
 
 \end{document}

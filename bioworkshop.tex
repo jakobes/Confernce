@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
-%\usepackage[a4paper,left=10mm,right=15mm,top=10mm,bottom=10mm]{geometry}
+%\usepackage[a4paper]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{needspace}
@@ -23,6 +23,7 @@
 \usepackage{tabularx} 
 \usepackage{caption}
 \usepackage{background}
+
 \backgroundsetup{
 scale=1,
 angle=34,
@@ -105,7 +106,6 @@ contents={\begin{tikzpicture}[remember picture,overlay]
  text width=0.1\textwidth, text centered, minimum height=6em]
 
 
-
 \begin{document}
 
 \newenvironment{changemargin}[2]{%
@@ -118,6 +118,42 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 \setlength{\parsep}{\parskip}%
 }%
 \item[]}{\end{list}}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/mat-mn-navn-eng.eps}\par\vspace{1cm}
+	{\scshape\LARGE Bio Workshop \par}
+	\vspace{1cm}
+	{\scshape\Large Tøyen Hovedgård\par}
+	\vspace{1.5cm}
+	\begin{changemargin}{-1cm}{-1cm}
+\begin{center}
+\includegraphics[scale=0.4]{img/hoved.jpg} 
+\end{center}
+\end{changemargin}
+
+	\vfill
+
+% Bottom of the page
+
+\end{titlepage}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newcommand{\eventblock}[5]{ 
 \node [#1,#2] (#3) {#4};
@@ -155,6 +191,7 @@ Aslak Tveito \\ Mattia Gazzola}{09.30}
 \end{center}
 
 \clearpage
+
 \subsection*{\underline{The airport}}
 
 \textbf{When you arrive at the airport} you need to
@@ -257,7 +294,6 @@ the fastest way to get there.
 \end{wrapfigure}
 
 
-
 \clearpage
 \begin{center}
 
@@ -271,7 +307,7 @@ In Oslo there are many different places that offer a good time, and we will pres
 \begin{wrapfigure}[9]{R}{0.5\textwidth}
     \centering
     \captionsetup{width=0.4\textwidth}
-    \includegraphics[width=0.5\textwidth]{Vigelansparken.jpg}% 
+    \includegraphics[width=0.5\textwidth]{img/Vigelansparken.jpg}% 
      \caption*{The monolith sculpute in the Park.}
 \end{wrapfigure}
 
@@ -281,7 +317,7 @@ The Vigeland Park is the world's largest sculpture park made by a single artist,
 
 \begin{wrapfigure}[10]{R}{0.5\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{operahouse.jpg}% 
+    \includegraphics[width=0.5\textwidth]{img/operahouse.jpg}% 
      \caption*{Oslo Opera House }
 \end{wrapfigure}
 
@@ -294,8 +330,8 @@ Large-scale windows at street level provide the public with glimpses of rehearsa
 \clearpage
 
 \section*{Gr\"unerløkka}
-Former factory district turned fashion hub, with laid-back cafes and galleries galore, Grünerløkka is a colourful mix of old and new decor. Independent boutiques and design shops showcase Oslo’s more alternative side, with 19th-century buildings serving as a picturesque backdrop.
-
+Through Oslo, from north to south, runs the river Akerselva. Along the river there are parklands and walking trails, but also remains of Oslo’s industrial history. 
+Gr\"unerløkka lies on the east side of the river, behind the old industrial buildings. The former factory district turned fashion hub, with laid-back cafes and galleries galore, Gr\"unerløkka is a colourful mix of old and new decor. Independent boutiques and design shops showcase Oslo’s more alternative side, with 19th-century buildings serving as a picturesque backdrop.
 
 
 
@@ -308,7 +344,7 @@ Former factory district turned fashion hub, with laid-back cafes and galleries g
 
 
 % ABSTRACTS
-\includegraphics[scale=0.3]{mat-mn-navn-eng.eps} 
+\includegraphics[scale=0.3]{img/mat-mn-navn-eng.eps} 
 
 
 \overview{2D or not 2D: Dimensional and mechanical cues in cell migration.}{Cinzia Anita Maria Progida}{Associate Professor
@@ -367,7 +403,7 @@ underlying waste removal from the brain can play a crucial role in evaluating hy
 and identifying its driving mechanisms. This talk describes the journey of attempting to
 resolve some of the questions surrounding the removal of A$\beta$ in healthy individuals,
 starting from the biomedical evidence, to the analytical and numerical methods to disprove
-one of the most popular hypotheses and the derivation of new hypotheses. I will argue that
+one of the most popular hypotheses and the derivation of new hypotheses. I will argue thatexample-image-1x1
 in order to fully resolve the onset and development of neurodegenerative diseases we
 require fully interdisciplinary scientists working side-by- side with experimental researchers
 and taking into account the multiple scales involved in the cerebral waste transport

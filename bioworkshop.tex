@@ -21,7 +21,7 @@
 
 \definecolor{Red}{rgb}{1,0,0}
 \definecolor{Green}{rgb}{0,1,0}
-\usepackage{tabularx} 
+\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{background}
 
@@ -49,13 +49,13 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 %    {#3\par}
 %    \smallskip
 %
-%    
+%
 %  {%
 %  \bigskip
 %  \hrule
 %  \bigskip
 %  }
-%  
+%
 %  \end{center}
 %}
 \newenvironment{overview}[4][]{
@@ -70,40 +70,40 @@ contents={\begin{tikzpicture}[remember picture,overlay]
     {#3\par}
     \smallskip
     {\small #4\par}
-  
+
   {%
   \bigskip
   \hrule
   \bigskip
   }
   \end{center}
-}  
+}
 
 \newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
-\newcommand{\mlcr}[4]{\multicolumn{#1}{#4}{\multirow{#2}{*}{#3}}} 
+\newcommand{\mlcr}[4]{\multicolumn{#1}{#4}{\multirow{#2}{*}{#3}}}
 
-\tikzstyle{blue} = [rectangle, draw, fill=blue!20, 
+\tikzstyle{blue} = [rectangle, draw, fill=blue!20,
  text width=0.4\textwidth, text centered, minimum height=4em]
 
-\tikzstyle{red} = [rectangle, draw, fill=red!20, 
+\tikzstyle{red} = [rectangle, draw, fill=red!20,
  text width=0.4\textwidth, text centered, minimum height=4em]
- 
-\tikzstyle{timered} = [rectangle, draw, fill=red!20, 
+
+\tikzstyle{timered} = [rectangle, draw, fill=red!20,
  text width=0.1\textwidth, text centered, minimum height=4em]
- 
-\tikzstyle{timeblue} = [rectangle, draw, fill=blue!20, 
+
+\tikzstyle{timeblue} = [rectangle, draw, fill=blue!20,
  text width=0.1\textwidth, text centered, minimum height=4em]
- 
-\tikzstyle{blue2} = [rectangle, draw, fill=blue!20, 
+
+\tikzstyle{blue2} = [rectangle, draw, fill=blue!20,
  text width=0.4\textwidth, text centered, minimum height=6em]
 
-\tikzstyle{red2} = [rectangle, draw, fill=red!20, 
+\tikzstyle{red2} = [rectangle, draw, fill=red!20,
  text width=0.4\textwidth, text centered, minimum height=6em]
- 
-\tikzstyle{timered2} = [rectangle, draw, fill=red!20, 
+
+\tikzstyle{timered2} = [rectangle, draw, fill=red!20,
  text width=0.1\textwidth, text centered, minimum height=6em]
- 
-\tikzstyle{timeblue2} = [rectangle, draw, fill=blue!20, 
+
+\tikzstyle{timeblue2} = [rectangle, draw, fill=blue!20,
  text width=0.1\textwidth, text centered, minimum height=6em]
 
 
@@ -127,10 +127,10 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 	\vspace{1cm}
 	{\scshape\Large Tøyen Hovedgård \\ Oslo Norway\par}
 	\vspace{1.5cm}
-	
+
 \begin{changemargin}{-1cm}{-1cm}
 
-\includegraphics[scale=0.4]{img/hoved.jpg} 
+\includegraphics[scale=0.4]{img/hoved.jpg}
 
 \centering
 \vspace{0.5cm}
@@ -140,7 +140,7 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 
 
 \includegraphics[scale=0.45]{01-UiO-Hovedlogo/English/UiO_Seal_B_ENG_cmyk.eps}\hspace*{2cm}
-\includegraphics[scale=0.45]{img/logo.png} 
+\includegraphics[scale=0.45]{img/logo.png}
 \end{changemargin}
 
 	\vfill
@@ -166,7 +166,7 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 
 
 
-\newcommand{\eventblock}[5]{ 
+\newcommand{\eventblock}[5]{
 \node [#1,#2] (#3) {#4};
 \node [time#1,left= of #3] (Time) {#5 }  ;  }
 \begin{center}
@@ -174,7 +174,7 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 \begin{changemargin}{-1cm}{-1cm}
 \begin{tikzpicture}[node distance=-1pt, auto]
  % Place nodes
- 
+
 \eventblock{red}{}{Friday}{Program \\ Friday 29.september }{}
 \eventblock{blue}{below= of Friday}{Registration}{Registration with coffee and danish}{09.00}
 \eventblock{red}{below= of Registration}{Opening}{Opening \\ Dekan Morten Dælen}{09.15}
@@ -251,26 +251,16 @@ weather is nice, walking is recommended. If needed, taxi's
 are a common sight in Oslo but if none are found you can order one
 at tlf: +47 02323. Note that taxies are expensive in Norway.
 
-\begin{figure}
-    \centering
-    \href{https://www.google.com/maps/d/edit?hl=no&hl=no&mid=1q9FpcHekR77D16V4eefgqkybvNc&ll=59.91839077669053%2C10.758429782339476&z=15}{\includegraphics[width=0.5\linewidth, height=0.5\linewidth]{img/Oslo.png}}
-    \caption{Locations of the 5 workshop related locations in Oslo.}
-    \label{fig:Oslo}
-\end{figure}
-
 
 \subsection*{\underline{Comfort Hotel Karl Johan}}
 
-
-is located at Karl Johans gate 12 near
-the train station at Jernbanetorget.
-
-\begin{wrapfigure}{R}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
 \centering
 \includegraphics[scale=0.2]{img/comfort_karl_johan.jpg}
 \caption{\label{fig:frog1}Exterior of Comfort Hotel Karl Johan.}
 \end{wrapfigure}
-
+The hotel is located at Karl Johans gate 12 near
+the train station at Jernbanetorget.
 This is also
 a hub for public transportation in Oslo. \textbf{To get to
 Tøyen hovedgård} where the workshop is taking place,
@@ -278,7 +268,9 @@ the best option is to take the subway from Jernbanetorget
 to Tøyen and walk the remaining bit. The subway station
 at Jernbanetorget is located under the shopping centre
 Byporten and the entrances are clearly marked.
-All subway trains, 1-5, go to Tøyen from
+All subway trains,
+\clearpage
+\noindent 1-5, go to Tøyen from
 Jernbanetorget in the eastward direction. \textbf{To get from
 the restaurant, Trattoria Popolare,} you can take the tram. Lines
 11, 12 and 13 will take you from Schous Plass to Jernbanetorget.
@@ -286,6 +278,11 @@ the restaurant, Trattoria Popolare,} you can take the tram. Lines
 
 
 \subsection*{\underline{Scandic Vulkan}}
+\begin{wrapfigure}{r}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.3]{img/scandic-vulkan.jpg}
+\caption{\label{fig:frog1}Exterior of Scandic Vulkan.}
+\end{wrapfigure}
 The hotel is located in Maridalsveien 13.
 \textbf{The best way to get to Scandic Vulkan} from
 Jernbanetorget is by bus. Lines 34 and 54 will take you
@@ -298,11 +295,17 @@ is only a 10 minute walk along the river
  from your hotel and this is also
 the fastest way to get there.
 
-\begin{wrapfigure}{R}{0.4\textwidth}
-\centering
-\includegraphics[scale=0.3]{img/scandic-vulkan.jpg}
-\caption{\label{fig:frog1}Exterior of Scandic Vulkan.}
-\end{wrapfigure}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\begin{figure}[h]
+    \centering
+    \href{https://www.google.com/maps/d/edit?hl=no&hl=no&mid=1q9FpcHekR77D16V4eefgqkybvNc&ll=59.91839077669053%2C10.758429782339476&z=15}{\includegraphics[width=0.6\linewidth, height=0.6\linewidth]{img/Oslo.png}}
+    \caption{Locations of the 5 workshop related locations in Oslo.}
+    \label{fig:Oslo}
+\end{figure}
 
 
 \clearpage
@@ -318,17 +321,17 @@ In Oslo there are many different tourist attractions, and we will present a few 
 \begin{wrapfigure}[9]{R}{0.5\textwidth}
     \centering
     \captionsetup{width=0.4\textwidth}
-    \includegraphics[width=0.5\textwidth]{img/Vigelansparken.jpg}% 
+    \includegraphics[width=0.5\textwidth]{img/Vigelansparken.jpg}%
      \caption*{The monolith sculpute in the Park.}
 \end{wrapfigure}
 
-\section*{Vigeland Sculpture Park} 
+\section*{Vigeland Sculpture Park}
 
 Vigeland Park is the world's largest sculpture park made by a single artist, and is one of Norway's most popular tourist attractions. The unique sculpture park is Gustav Vigeland's lifework with more than 200 sculptures in bronze, granite and wrought iron. The park is located a short 10 minute walk from the subway station Majorstuen.
 
 \begin{wrapfigure}[10]{R}{0.5\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{img/operahouse.jpg}% 
+    \includegraphics[width=0.5\textwidth]{img/operahouse.jpg}%
      \caption*{Oslo Opera House }
 \end{wrapfigure}
 
@@ -341,7 +344,7 @@ Large-scale windows at street level provide the public with glimpses of rehearsa
 \clearpage
 
 \section*{Gr\"unerløkka}
-Through Oslo, from north to south, runs the river Akerselva. Along the river there are parklands and walking trails, but also remains of Oslo’s industrial history. 
+Through Oslo, from north to south, runs the river Akerselva. Along the river there are parklands and walking trails, but also remains of Oslo’s industrial history.
 Gr\"unerløkka lies on the east side of the river, behind the old industrial buildings. The former factory district turned fashion hub, with laid-back cafes and galleries galore, Gr\"unerløkka is a colourful mix of old and new decor. Independent boutiques and design shops showcase Oslo’s more alternative side, with 19th-century buildings serving as a picturesque backdrop.
 
 
@@ -350,12 +353,12 @@ Gr\"unerløkka lies on the east side of the river, behind the old industrial bui
 
 
 
-\clearpage 
+\clearpage
 
 
 
 % ABSTRACTS
-\includegraphics[scale=0.3]{img/mat-mn-navn-eng.eps} 
+\includegraphics[scale=0.3]{img/mat-mn-navn-eng.eps}
 
 
 \section*{Session 1}
@@ -410,7 +413,7 @@ small number of cells.}
 
 \overview{
 Mechanics of the cell interface studied by supported lipid bilayers
-}{Margarita Staykova}{Durham University}{ The cell membrane undergoes complex morphological and surface area transformations while being confined to an underlying actin cortex, the membranes of neighboring cells or other extracellular structures. To understand the role of confinement in the membrane processes we adhere synthetic lipid bilayers to artificial substrates and subject them to perturbations that are common to the cell membrane - 1) substrate area changes, or 2) intake of extra lipids. Our results show that confined lipid bilayers regulate the arising changes in their lipid density either by the expulsion and absorption of lipid protrusions, such as tubes and vesicles, or by sliding over the substrate. Similar processes have been recently confirmed in living cells. We provide a theoretical framework that rationalizes the membrane behavior in terms of the membrane elasticity, and the adhesion and hydrodynamic interactions between the membrane and the substrate. 
+}{Margarita Staykova}{Durham University}{ The cell membrane undergoes complex morphological and surface area transformations while being confined to an underlying actin cortex, the membranes of neighboring cells or other extracellular structures. To understand the role of confinement in the membrane processes we adhere synthetic lipid bilayers to artificial substrates and subject them to perturbations that are common to the cell membrane - 1) substrate area changes, or 2) intake of extra lipids. Our results show that confined lipid bilayers regulate the arising changes in their lipid density either by the expulsion and absorption of lipid protrusions, such as tubes and vesicles, or by sliding over the substrate. Similar processes have been recently confirmed in living cells. We provide a theoretical framework that rationalizes the membrane behavior in terms of the membrane elasticity, and the adhesion and hydrodynamic interactions between the membrane and the substrate.
 }
 
 
@@ -475,7 +478,7 @@ elasticity theory a quantitative understanding of this process is now emerging.}
 
 
 
-\overview{Physics of epithelial folding}{Guillaume Salbreux}{The Francis Crick Institute}{  
+\overview{Physics of epithelial folding}{Guillaume Salbreux}{The Francis Crick Institute}{
 Three-dimensional deformations of epithelia play a fundamental role in tissue morphogenesis. The shape of an epithelium is determined by mechanical stresses acting within the tissue cells and from the outside environment. Here we introduce a three-dimensional vertex model which allows to represent the shape of a tissue in three dimensions by a set of vertices. In the model, the motion of vertices is set by apical, lateral and basal surface and line tensions, as well as intracellular pressures and external forces. Using this framework, we discuss how patterned force generation in an epithelium can drive biological tissue folding in fold formation in the Drosophila wing disc and in pancreatic tumour formation.}
 
 

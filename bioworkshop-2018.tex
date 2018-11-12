@@ -15,7 +15,7 @@
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{xcolor,colortbl}
-
+\usepackage{ragged2e}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 
@@ -73,7 +73,7 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 %
 %  \end{center}
 %}
-\newenvironment{overview}[4][]{
+\newenvironment{overview}[4][]{ 
   \needspace{10\baselineskip}
   \begin{center}
     { \renewcommand\textsuperscript[1]{}
@@ -89,9 +89,10 @@ contents={\begin{tikzpicture}[remember picture,overlay]
   {%
   \bigskip
   \hrule
-  \bigskip
+
   }
   \end{center}
+
 }
 
 \newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
@@ -194,7 +195,7 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 \eventblock{red}{below= of Registration}{Opening}{Opening \\ }{09.45}
 \eventblock{blue}{below= of Opening}{SessionOne}{Timo Koch \\ Johan Ulrik Lind }{S1 \\ 10.00}
 \eventblock{red}{below= of SessionOne}{BreakOne}{Break with coffee and softdrinks}{10.50}
-\eventblock{blue2}{below= of BreakOne}{SessionTwo}{Nir Gov \\ Roberto Mayor \\ Orit Peleg  }{S2 \\ 11.10}
+\eventblock{blue2}{below= of BreakOne}{SessionTwo}{Nir Gov \\ Roberto Mayor \\  Andrew Callan-Jones }{S2 \\ 11.10}
 \eventblock{red}{below= of SessionTwo}{Lunch}{Lunch}{12.30}
 \eventblock{blue}{below= of Lunch}{SessionThree}{Stephen Payne \\ Marcela Szopos }{S3 \\ 13.30}
 \eventblock{red}{below= of SessionThree}{BreakTwo}{Break with coffee and fruits}{14.40}
@@ -204,10 +205,10 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 
 
 \eventblock{red}{right=2cm of Friday}{Saturday}{Program \\ Saturday November 17 }{}
-\eventblock{blue2}{below= of Saturday}{SessionFive}{ Lars Magnus Valnes \\ Karen Støverud \\ 
-Federica Laurino }{S5 \\ 10.00}
+\eventblock{blue2}{below= of Saturday}{SessionFive}{ Karen Støverud \\ 
+Federica Laurino \\ Lars Magnus Valnes }{S5 \\ 10.00}
 \eventblock{red}{below= of SessionFive}{BreakThree}{Break with coffee, croissants and softdrinks}{  11.15}
-\eventblock{blue}{below= of BreakThree}{SessionSix}{Josip Augustin Jane\v{s} \\ Andrew Callan-Jones}{S6 \\ 11.40}
+\eventblock{blue}{below= of BreakThree}{SessionSix}{ Orit Peleg \\ Josip Augustin Jane\v{s} }{S6 \\ 11.40}
 \eventblock{red}{below= of SessionSix}{LunchTwo}{Lunch}{12.30}
 
 
@@ -264,49 +265,50 @@ weather is nice, walking is recommended. If needed, taxi's
 are a common sight in Oslo but if none are found you can order one
 at tlf: +47 02323. Note that taxies are expensive in Norway.
 
-\clearpage
+%\clearpage
+%
+%\subsection*{\underline{Comfort Hotel Karl Johan}}
+%
+%\begin{wrapfigure}{r}{0.4\textwidth}
+%\centering
+%\includegraphics[scale=0.2]{img/comfort_karl_johan.jpg}
+%\caption{\label{fig:frog1}Exterior of Comfort Hotel Karl Johan.}
+%\end{wrapfigure}
+%The hotel is located at Karl Johans gate 12 near
+%the train station at Jernbanetorget.
+%This is also
+%a hub for public transportation in Oslo. \textbf{To get to
+%Tøyen hovedgård} where the workshop is taking place,
+%the best option is to take the subway from Jernbanetorget
+%to Tøyen and walk the remaining bit. The subway station
+%at Jernbanetorget is located under the shopping centre
+%Byporten and the entrances are clearly marked.
+%All subway trains,
+%\noindent 1-5, go to Tøyen from
+%Jernbanetorget in the eastward direction. \textbf{To get from
+%the restaurant, Nedre Foss Gård,} you can take the tram. Lines
+%11, 12 and 13 will take you from Schous Plass to Jernbanetorget.
 
-\subsection*{\underline{Comfort Hotel Karl Johan}}
 
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begingroup
+\subsection*{\underline{Scandic Vulkan}}\setlength\intextsep{0pt}
+\begin{wrapfigure}{r}{0.35\textwidth}
 \centering
-\includegraphics[scale=0.2]{img/comfort_karl_johan.jpg}
-\caption{\label{fig:frog1}Exterior of Comfort Hotel Karl Johan.}
-\end{wrapfigure}
-The hotel is located at Karl Johans gate 12 near
-the train station at Jernbanetorget.
-This is also
-a hub for public transportation in Oslo. \textbf{To get to
-Tøyen hovedgård} where the workshop is taking place,
-the best option is to take the subway from Jernbanetorget
-to Tøyen and walk the remaining bit. The subway station
-at Jernbanetorget is located under the shopping centre
-Byporten and the entrances are clearly marked.
-All subway trains,
-\noindent 1-5, go to Tøyen from
-Jernbanetorget in the eastward direction. \textbf{To get from
-the restaurant, Nedre Foss Gård,} you can take the tram. Lines
-11, 12 and 13 will take you from Schous Plass to Jernbanetorget.
-
-
-
-\subsection*{\underline{Scandic Vulkan}}
-\begin{wrapfigure}{r}{0.42\textwidth}
-\centering
-\includegraphics[width=0.45\textwidth, height=0.3\textwidth]{img/scandic-vulkan.jpg}
+\vspace{-4pt}
+\includegraphics[width=0.40\textwidth, height=0.30\textwidth]{img/scandic-vulkan.jpg}
 \caption{\label{fig:frog1}Exterior of Scandic Vulkan.}
 \end{wrapfigure}
 The hotel is located in Maridalsveien 13.
-\textbf{The best way to get to Scandic Vulkan} from
+The best way to get to \textbf{Scandic Vulkan} from
 Jernbanetorget is by bus. Lines 34 and 54 will take you
 to the bus stop Telthusbakken which is located 100 meters
-north of the hotel. \textbf{To get to Tøyen hovedgård}
+north of the hotel. To get to \textbf{Tøyen hovedgård}
 you can take the bus back to Oslo S and from there take
 the subway in the eastward direction to Tøyen. All subway
-lines, 1-5, takes you there. \textbf{The restaurant, Nedre Foss Gård}
+lines, 1-5, takes you there. The restaurant, \textbf{Nedre Foss Gård}
 is right across the river from your hotel.
 
-
+\endgroup
 
 \clearpage
 \begin{center}
@@ -330,6 +332,7 @@ In Oslo there are many different tourist attractions, and we will present a few 
 Vigeland Park is the world's largest sculpture park made by a single artist, and is one of Norway's most popular tourist attractions. The unique sculpture park is Gustav Vigeland's lifework with more than 200 sculptures in bronze, granite and wrought iron. The park is located a short 10 minute walk from the subway station Majorstuen.
 
 \begin{wrapfigure}[10]{R}{0.5\textwidth}
+\vspace{10pt}
     \centering
     \includegraphics[width=0.5\textwidth]{img/operahouse.jpg}%
      \caption{Oslo Opera House }
@@ -353,7 +356,7 @@ Gr\"unerløkka lies on the east side of the river, behind the old industrial bui
 \begin{figure}[h]
     \centering
    \includegraphics[width=1.0\textwidth]{img/Oslo2.png} 
-    \caption{Locations of the 5 workshop related locations in Oslo.}
+    \caption{Locations of the 4 workshop related locations in Oslo.}
     \label{fig:Oslo}
 \end{figure}
 
@@ -369,21 +372,18 @@ Gr\"unerløkka lies on the east side of the river, behind the old industrial bui
 
 
 \section*{Session 1}
+\vspace{10pt}
 \overview{A sub-voxel perfusion model to estimate capillary wall diffusivity from clinical perfusion MR data}{Timo Koch}{Institute for Modelling Hydraulic and Environmental Systems \\ Universität Stuttgart
 }
 {We propose a new mathematical model to infer capillary leakage coefficients from dynamic susceptibility contrast MRI data. We derive an embedded mixed-dimension flow and transport model for a contrast agent in brain tissue. We further present a magnetic resonance signal model for the considered sequence. This allows modeling MR signal–time curves that can be compared to clinical perfusion MR patient data. The proposed model can be used to infer capillary wall diffusivity. Investigating the example of multiple sclerosis, we conclude that capillary wall diffusivity is a good indicator for characterizing MS lesions.}
 
 
-
-\overview{Tailored in vitro tissue models: Instrumentation \& 3D printing}{Johan Ulrik Lind }{Department of Micro- and Nanotechnology \\
+\overview{ \hspace{1.3cm}Tailored in vitro tissue models:  \newline Instrumentation \& 3D printing}{Johan Ulrik Lind }{Department of Micro- and Nanotechnology \\
 Technical University of Denmark }
 {Organs-on-chips, microphysiological systems and organoids are emerging stem cell-based tissue models, which aim to replicate essential aspects of human biology in the lab. In addition to serving as improved drug-screening platforms for pre-clinical research, these tissue models provide new opportunities for elucidating tissue development and intercellular communication. Yet, in order to fully to realize their potential, means for tailoring of tissue models towards specific questions, as well as for acquiring data, are needed. Towards these challenges, multi-material 3D printing provides a unique opportunity. As a first step, we have developed a series of customized cardiac tissue models with tailored architectures and embedded soft sensors. The embedded soft electronic sensors allowed us to perform real-time, long-term and higher-throughput studies of tissue development and response to external stimuli. The 3D printed tissue model platforms rely on a range of custom synthetic and biological printing inks that provide a general framework for tailored in vitro biological research. }
 
 \section*{Session 2}
-
-
-
-
+\vspace{10pt}
 \overview{Curved membrane proteins that recruit actin polymerization: Lamellipodia, protrusions and shape transitions
 }{Nir Gov}{
 Department of Chemical and Biological Physics\\
@@ -393,26 +393,29 @@ Membrane proteins, either trans-membrane or adsorbed, can cause a local bending 
 
 }
 
-\overview{
-Rear supracellular contraction drives collective cell chemotaxis}{Roberto Mayor}{Department of Cell and Developmental Biology \\ University College London }
+\overview{\hspace{1.cm}
+Rear supracellular contraction drives \newline collective cell chemotaxis}{Roberto Mayor}{Department of Cell and Developmental Biology \\ University College London }
 {
 Collective cell chemotaxis, the directed migration of cell groups along gradients of soluble chemical cues, underlies various developmental and pathological processes. Here we use neural crest cells, a migratory embryonic stem cell population whose behaviour has been likened to malignant invasion, to study collective chemotaxis in vivo. We show that the neural crest exhibits a tensile actomyosin ring at the edge of the migratory cell group that contracts in a supracellular fashion. This contractility is polarized during collective cell chemotaxis: it is inhibited at the front but persists at the rear of the cell cluster. By developing a mathematical model and testing its predictions in vivo, we found that the rear contraction leads to cell intercalation that triggers a wave of cellular flow within the cell cluster.  We show, consistently with the mathematical model, that central cells move forward, but when they reach the front of the cluster they are engaged in a peripheral retrograde movement.  This dynamic cell rearrangement is equivalent to the cytoplasmic movement observed in single cell migration, and therefore we propose that during collective chemotaxis the whole cluster behaves as a single giant cell or “supercell”.
 }
 
 
 
+\overview{Friction-Driven Scission of Membrane Tubes.}{Andrew Callan-Jones}{Laboratoire Matière et Systèmes Complexes \\ Université Paris-Diderot}{
+ Membrane scission is essential for intracellular trafficking. While curved BAR domain proteins such as endophilin have been reported to be
+ involved in dynamin-independent scission of tubular membrane necks, the cutting mechanism remained unknown. In this talk, I will present 
+recent work, combining a theoretical model, in vitro, and in vivo experiments, that reveals how a protein scaffold – a rigid sleeve made up of these
+ proteins – can cut tubular membranes connected to a quasi-flat membrane reservoir. We found that the scaffold – which assembles from protein
+ subunits in solution onto the tube and near the junction with the reservoir – bound to the underlying tube creates a frictional barrier for lipid diffusion; 
+tube elongation thus builds up local membrane tension until the membrane undergoes scission through lysis.  As I will discuss, the lysis step was
+ modeled as a stochastic pore nucleation event at the scaffold/bare tube boundary that leads to scission. We call this mechanism friction-driven scission (FDS). In cells, motors
+ pull tubes, in particular during endocytosis. Through reconstitution, we showed that motors can not only pull out and extend protein-scaffolded tubes, but also cut them by FDS. }
 
 
-\overview{Collective mechanical adaptation of honeybee swarms.}{Orit Peleg}{Computer Science
-BioFrontiers Institute \\University of Colorado.}{Honeybee (Apis mellifera) swarms form large congested tree-hanging clusters made solely of bees attached to each other [1]. How these structures are maintained under the influence of dynamic mechanical forcing is unknown. To address this, we created pendant clusters and subject them to dynamic loads of varying orientation, amplitude, frequency and duration. We find that horizontally shaken clusters adapt by spreading out to form wider, flatter cones that recover their original shape when unloaded. Measuring the response of a cluster to an impulsive pendular excitation shows that flattened cones deform less and relax faster than the elongated ones (that is, they are more stable). Particle-based simulations of a passive assemblage suggest a behavioral hypothesis: individual bees respond to local variations in strain by moving up the strain gradient, which is qualitatively consistent with our observations of individual bee movement during dynamic loading. The simulations also suggest that vertical shaking will not lead to significant differential strains and thus no shape adaptation, which we confirmed experimentally. Together, our findings highlight how a super-organismal structure responds to dynamic loading by actively changing its morphology to improve the collective stability of the cluster at the expense of increasing the average mechanical burden of an individual.} 
-\\\\
-\small{
-[1] Seeley, T. D. Honeybee Democracy (Princeton Univ. Press, Princeton, NJ, 2010).
-}
-
+\clearpage
 \section*{Session 3}
 
-\overview{Modelling the cerebral microvasculature across multiple length scales and multiple compartments}{Stephen Payne}{Engineering Science (Biomedical Engineering) \\ University of Oxford
+\overview{Modelling the cerebral microvasculature across multiple length scales and multiple compartments}{Stephen Payne}{Department of Engineering Science \\ University of Oxford
 }
 {
 In our previous work, we have developed a number of different models of the cerebral circulation, from 0D lumped compartment models to highly detailed 3D models of the microcirculation. Through the use of homogenisation techniques we have been able to scale up the microcirculation to a single compartment porous medium model that couples with models of individual penetrating cortical vessels. In the first part of the talk, I will present our current work that expand this through the use of a dual-porosity porous medium model in order to model the cerebral cortex more accurately. This work also directly links to multiple-compartment poro-elastic models, developed by a number of groups, which I will discuss. In the second part of the talk, I will present our current work on bridging the length-scale gap between large vessels (i.e. those that can be individually imaged) and the microcirculation, over which length scales surprisingly little anatomical information is known. I will present our proposed modelling approach and discuss how such whole-brain blood flow models can be validated and used within a patient-specific model, in particular in response to ischaemic stroke
@@ -436,13 +439,11 @@ in health and disease and to the unique accessibility of the eye to
 non-invasive measurements.
 }
 
-
 \section*{Session 4}
 
 \overview{Modeling Scaffoldless Vesicle Formation
-}{Susanne Liese$\sp{1}$ , Rossane Rojas$\sp{1}$ , Eva Wenzel$\sp{2}$ , Camilla Raiborg$\sp{2}$, Harald Stenmark$\sp{2}$ , Andreas Carlson$\sp{1}$ 
-}{$\sp{1}$ University of Oslo, Department of Mathematics \\
-$\sp{2}$ Oslo University Hospital, Department of Molecular Cell Biology  }{
+}{Susanne Liese 
+}{Department of Mathematics \\ University of Oslo}{
 Membrane vesicles are ubiquitous in biology. They serve as compartments to segregate and trans-
 port biological material and play a vital role in cell communication. In eukaryotic cells, the formation
 of endosomal intraluminal vesicles (ILV), is essential for the cell functionality, where encapsulating
@@ -457,9 +458,6 @@ shape of a membrane by an elastic two dimensional Helfrich-type sheet. Based on 
 identify a combination of effective transmembrane protein interaction and protein crowding as the
 origin of protein induced membrane deformation.
 }
-
-
-
 
 \overview{Studies of virus replication using cryo-electron tomography and in vitro
 reconstitution.
@@ -485,15 +483,16 @@ in cells infected with positive-sense RNA viruses.
 }{Department of Bionanoscience \\ TU Delft, The Netherlands}{
 Membranes in living cells adapt a wide variety of continually evolving shapes closely related to their function. These shapes are regulated by curvature-inducing proteins, which also interact via the membrane deformations they impose. We study such membrane-mediated interactions in the globally curved and crowded setting of membranes inside the living cell. We find that the collective action of many proteins can change the overall membrane shape, and lead to the formation of many striking patterns that can be tested both in vivo and in biomimetic soft matter systems.}
 
-
+\clearpage
 
 \section*{Session 5}
 
-\overview{Assessing paravascular transport in the brain by partial differential equation (PDE) constrained optimization}{Lars Magnus Valnes$\sp{1}$ Geir Ringstad$\sp{2}$ , Per K.Eide $\sp{2}$ , Sebastian Mitusch$\sp{3}$ ,
-Simon Funke$\sp{3}$ and Kent-Andre Mardal$\sp{1,3}$
-}{$\sp{1}$ University of Oslo, Department of Mathematics\\ 
-$\sp{2}$Oslo University Hospital Rikshospitalet \\
-$\sp{3}$Simula Research Laboratory 
+
+\overview{CSF absorption -the path of least resistance}{
+Karen Støverud}{Department of Radiation Sciences \\  Umeå University }{Infusion tests describe the volume-pressure relationship of CSF and are often used to calculate the resistance of CSF outflow via the arachnoid granulations. Over the last ten to 20 years alternative absorptions routes have been proposed. One of them is related to the glymphatics theory. According to this theory some of the CSF is absorbed by the parenchyma where it eventually enters the bloodstream and disappears. In the current study, we evaluate the plausibility of absorption through three different pathways; the arachnoid granulations, the pia mater, and the perivascular space.
+}
+\overview{Assessing paravascular transport in the brain by partial differential equation (PDE) constrained optimization}{Lars Magnus Valnes
+}{Department of Mathematics \\ University of Oslo
  }{
 The proposed glymphatic system suggests a new mechanism for waste clearance from the brain, and has sparked new research on Alzheimer's disease where one of the defining features
 is that metabolic waste accumulate within the brain. The glympahtic hypothesis is still controversial, but experimental investigations in rodents as well as novel MRI investigations in humans indicates the existence of such a system. A proper theoretical foundation 
@@ -503,13 +502,6 @@ waste clearance when compared to extracellular diffusion alone. Therefore
 we will in this paper evaluate to what extent partial differential constrained optimization methods can be used to identify modeling parameters for glymphatic transport. We assume that the transport can be modeled by a diffusion equation, representing extracellular diffusion and possibly dissipation caused by the glymphatic system. The observations are obtained from novel MRI techniques that
 aim to quantify long-term (hours/days) transfer mechanism in the brain. 
 }
-
-\overview{CSF absorption -the path of least resistance}{
-Karen Støverud}{Department of Radiation Sciences \\  Umeå University }{
-Infusion tests describe the volume-pressure relationship of CSF and are often used to calculate the resistance of CSF outflow via the arachnoid granulations. Over the last ten to 20 years alternative absorptions routes have been proposed. One of them is related to the glymphatics theory. According to this theory some of the CSF is absorbed by the parenchyma where it eventually enters the bloodstream and disappears. In the current study, we evaluate the plausibility of absorption through three different pathways; the arachnoid granulations, the pia mater, and the perivascular space.
-}
-
-
 
 \overview{
 A multiscale computational model for fluid and
@@ -543,30 +535,20 @@ nanocarriers with the vessel wall.
 
 
 
-
-
-
+\clearpage
 \section*{Session 6}
 
 
+\overview{Collective mechanical adaptation of honeybee swarms.}{Orit Peleg}{Computer Science
+BioFrontiers Institute \\University of Colorado.}{Honeybee (Apis mellifera) swarms form large congested tree-hanging clusters made solely of bees attached to each other [1]. How these structures are maintained under the influence of dynamic mechanical forcing is unknown. To address this, we created pendant clusters and subject them to dynamic loads of varying orientation, amplitude, frequency and duration. We find that horizontally shaken clusters adapt by spreading out to form wider, flatter cones that recover their original shape when unloaded. Measuring the response of a cluster to an impulsive pendular excitation shows that flattened cones deform less and relax faster than the elongated ones (that is, they are more stable). Particle-based simulations of a passive assemblage suggest a behavioral hypothesis: individual bees respond to local variations in strain by moving up the strain gradient, which is qualitatively consistent with our observations of individual bee movement during dynamic loading. The simulations also suggest that vertical shaking will not lead to significant differential strains and thus no shape adaptation, which we confirmed experimentally. Together, our findings highlight how a super-organismal structure responds to dynamic loading by actively changing its morphology to improve the collective stability of the cluster at the expense of increasing the average mechanical burden of an individual.} 
+\\\\
+\small{
+[1] Seeley, T. D. Honeybee Democracy (Princeton Univ. Press, Princeton, NJ, 2010).
+}
 
-\overview{Friction-Driven Scission of Membrane Tubes.}{Andrew Callan-Jones}{Laboratoire Matière et Systèmes Complexes \\ Université Paris-Diderot}{
- Membrane scission is essential for intracellular trafficking. While curved BAR domain proteins such as endophilin have been reported to be
- involved in dynamin-independent scission of tubular membrane necks, the cutting mechanism remained unknown. In this talk, I will present 
-recent work, combining a theoretical model, in vitro, and in vivo experiments, that reveals how a protein scaffold – a rigid sleeve made up of these
- proteins – can cut tubular membranes connected to a quasi-flat membrane reservoir. We found that the scaffold – which assembles from protein
- subunits in solution onto the tube and near the junction with the reservoir – bound to the underlying tube creates a frictional barrier for lipid diffusion; 
-tube elongation thus builds up local membrane tension until the membrane undergoes scission through lysis.  As I will discuss, the lysis step was
- modeled as a stochastic pore nucleation event at the scaffold/bare tube boundary that leads to scission. We call this mechanism friction-driven scission (FDS). In cells, motors
- pull tubes, in particular during endocytosis. Through reconstitution, we showed that motors can not only pull out and extend protein-scaffolded tubes, but also cut them by FDS. }
-
-
-
-
-
-
+\clearpage
 \overview{The role of membrane shape fluctuations in cell adhesion}{Josip Augustin Jane\v{s}$\sp{1,2}$ and Ana-Sun\v{c}ana Smith$\sp{1,2}$ 
-}{$\sp{1}$PULS Group, Institut f\"{o}r Theoretische Physik and Cluster of Excellence: \\ Engineering of Advanced Materials,
+}{$\sp{1}$PULS Group, Institut f\"{u}r Theoretische Physik and Cluster of Excellence: \\ Engineering of Advanced Materials,
 Friedrich Alexander Universit\"{a}t, Germany \\
 $\sp{2}$ Institut Ruder Bošković, Croatia}{
 In embryogenesis, vertebrate cells assemble into organized tissues. In metastatic cancer, cells spreading in the circulatory system build cell-cell contacts with the surrounding tissue to establish new tumors. At the root of these life-forming or life-threatening biological phenomena is cell adhesion, the binding of a biological cell to other cells or to extracellular matrix. The most obvious fundamental question to ask is then as follows: What factors control or govern cell adhesion? For a long time, the paradigmatic answer to this question was that specific protein molecules embedded in the cell wall (or membrane) were responsible for cell adhesion, in either a key-lock fashion (in cell-cell

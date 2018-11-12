@@ -1,0 +1,585 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+%\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{needspace}
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\sffamily\footnotesize}
+\usepackage{hyperref, graphicx, wrapfig}
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\makeindex[intoc]
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{xcolor,colortbl}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Green}{rgb}{0,1,0}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{background}
+
+
+\definecolor{HH1}{RGB}{96, 60, 20}
+\definecolor{bronze}{rgb}{0.8,0.5,0.2}
+\definecolor{silver}{rgb}{0.75, 0.75, 0.75}
+\definecolor{gold}{rgb}{0.83,0.69,0.22}
+\definecolor{color5}{RGB}{95, 84, 38}
+
+
+\definecolor{brass}{rgb}{0.71, 0.65, 0.26}
+\definecolor{apricot}{rgb}{0.98, 0.81, 0.69}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{nw}{HTML}{DCDCFF}
+\backgroundsetup{
+scale=1,
+angle=34,
+opacity=0.4,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = red!45,middle color = red!35, right color = white,rotate=1] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = white,middle color = green!20, right color = green!40,rotate=13] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = white,middle color = yellow!30, right color = white ,rotate=-13] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [left color =bronze!50,middle color=gold!40,  right color = silver!60, ,rotate=1] (current page.south west)rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}}
+}
+%\newenvironment{overview}[3][]{
+%  \needspace{10\baselineskip}
+%  \begin{center}
+%    { \renewcommand\textsuperscript[1]{}
+%      \phantomsection\addcontentsline{toc}{section}
+%      {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
+%    }
+%    {\large\bfseries #2\\}
+%    \medskip
+%    {#3\par}
+%    \smallskip
+%
+%
+%  {%
+%  \bigskip
+%  \hrule
+%  \bigskip
+%  }
+%
+%  \end{center}
+%}
+\newenvironment{overview}[4][]{
+  \needspace{10\baselineskip}
+  \begin{center}
+    { \renewcommand\textsuperscript[1]{}
+      \phantomsection\addcontentsline{toc}{section}
+      {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
+    }
+    {\large\bfseries #2\\}
+    \medskip
+    {#3\par}
+    \smallskip
+    {\small #4\par}
+
+  {%
+  \bigskip
+  \hrule
+  \bigskip
+  }
+  \end{center}
+}
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\newcommand{\mlcr}[4]{\multicolumn{#1}{#4}{\multirow{#2}{*}{#3}}}
+%opacity=0.2
+\tikzstyle{blue} = [rectangle, draw, fill=brass!20,
+ text width=0.4\textwidth, text centered, minimum height=4em]
+
+\tikzstyle{red} = [rectangle, draw, fill=apricot!80,
+ text width=0.4\textwidth, text centered, minimum height=4em]
+
+\tikzstyle{timered} = [rectangle, draw, fill=apricot!80,
+ text width=0.1\textwidth, text centered, minimum height=4em]
+
+\tikzstyle{timeblue} = [rectangle, draw, fill=brass!20,
+ text width=0.1\textwidth, text centered, minimum height=4em]
+
+\tikzstyle{blue2} = [rectangle, draw, fill=brass!20,
+ text width=0.4\textwidth, text centered, minimum height=6em]
+
+\tikzstyle{red2} = [rectangle, draw, fill=red!20,
+ text width=0.4\textwidth, text centered, minimum height=6em]
+
+\tikzstyle{timered2} = [rectangle, draw, fill=red!20,
+ text width=0.1\textwidth, text centered, minimum height=6em]
+
+\tikzstyle{timeblue2} = [rectangle, draw, fill=brass!20,
+ text width=0.1\textwidth, text centered, minimum height=6em]
+
+
+\begin{document}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/mat-mn-navn-eng.eps}\par\vspace{1cm}
+	{\scshape\LARGE BIOMECHANICS OF LIVING SYSTEMS, FROM CELLS TO ORGANISMS \par}
+	\vspace{1cm}
+	{\scshape\Large Tøyen Hovedgård \\ Oslo Norway\par}
+	\vspace{1.5cm}
+
+\begin{changemargin}{-1cm}{-1cm}
+
+\includegraphics[scale=0.4]{img/hoved.jpg}
+\centering
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+
+
+\includegraphics[scale=0.45]{01-UiO-Hovedlogo/English/UiO_Seal_B_ENG_cmyk.eps}\hspace*{2cm}
+
+\end{changemargin}
+
+	\vfill
+
+% Bottom of the page
+
+\end{titlepage}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\eventblock}[5]{
+\node [#1,#2] (#3) {#4};
+\node [time#1,left= of #3] (Time) {#5 }  ;  }
+\begin{center}
+\section*{PROGRAM}
+\begin{changemargin}{-1cm}{-1cm}
+\begin{tikzpicture}[node distance=-1pt, auto]
+ % Place nodes
+
+\eventblock{red}{}{Friday}{Program \\ Friday November 16  }{}
+\eventblock{blue}{below= of Friday}{Registration}{Registration with coffee and pastry}{09.30}
+\eventblock{red}{below= of Registration}{Opening}{Opening \\ }{09.45}
+\eventblock{blue}{below= of Opening}{SessionOne}{Timo Koch \\ Johan Ulrik Lind }{S1 \\ 10.00}
+\eventblock{red}{below= of SessionOne}{BreakOne}{Break with coffee and softdrinks}{10.50}
+\eventblock{blue2}{below= of BreakOne}{SessionTwo}{Nir Gov \\ Roberto Mayor \\ Orit Peleg  }{S2 \\ 11.10}
+\eventblock{red}{below= of SessionTwo}{Lunch}{Lunch}{12.30}
+\eventblock{blue}{below= of Lunch}{SessionThree}{Stephen Payne \\ Marcela Szopos }{S3 \\ 13.30}
+\eventblock{red}{below= of SessionThree}{BreakTwo}{Break with coffee and fruits}{14.40}
+\eventblock{blue2}{below= of BreakTwo}{SessionFour}{Susanne Liese \\ Lars-Anders Carlson \\ Timon Idema}{S4 \\ 15.00}
+\eventblock{red}{below= of SessionFour}{Social}{Social gathering with snacks, beer and wine.}{16.30}
+\eventblock{blue}{below= of Social}{Dinner}{Workshop dinner at \\ Nedre Foss Gård}{19.00}
+
+
+\eventblock{red}{right=2cm of Friday}{Saturday}{Program \\ Saturday November 17 }{}
+\eventblock{blue2}{below= of Saturday}{SessionFive}{ Lars Magnus Valnes \\ Karen Støverud \\ 
+Federica Laurino }{S5 \\ 10.00}
+\eventblock{red}{below= of SessionFive}{BreakThree}{Break with coffee, croissants and softdrinks}{  11.15}
+\eventblock{blue}{below= of BreakThree}{SessionSix}{Josip Augustin Jane\v{s} \\ Andrew Callan-Jones}{S6 \\ 11.40}
+\eventblock{red}{below= of SessionSix}{LunchTwo}{Lunch}{12.30}
+
+
+\end{tikzpicture}
+\end{changemargin}
+\end{center}
+
+\clearpage
+
+\
+\subsection*{\underline{The airport}}
+
+\textbf{When you arrive at the airport} you need to
+get to Oslo city center (Oslo S).
+The fastest and easiest means of transportation to and from the airport
+is by train. There are two different train operators, NSB
+(Norwegian State Railway) and Flytoget (Airport Express Train).
+There are some differences in price and
+ and frequency of departures.
+\textbf{Tickets for both NSB and Flytoget} can be bought at the airport
+and at Oslo S in automatic ticket machines which accepts both cash
+and credit cards.
+
+\textbf{Traveling with NSB} is the cheapest
+option whit a single ticket price
+of 93 NOK. The frequency of departures varies but
+usually there are at least 2 per hour and the time of travel is 23
+ minutes. The times for departure is easy to find
+both at the airport and at Oslo S.
+At NSB it is also possible to buy your ticket
+onboard the train at an additional cost of $40$NOK.
+Pay attention to which stop to exit at (Oslo S/Gardermoen airport)
+as this might not be the end stop for the train.
+
+\textbf{Traveling with Flytoget} costs 180 NOK for a single ticket
+but the frequency of departure per hour is 6, one every
+ten minutes with a travel time of approximately 20 minutes.
+Flytoget does not accept on-board payment!
+
+
+\subsection*{\underline{Getting around in Oslo}}
+
+The public transportation in Oslo is good with frequent
+departures if you want
+to take a bus, tram or subway. Buying tickets must be
+done in advance and there are many places you can buy a
+ticket. Oslo S, Narvesen, 7-eleven and Deli de Luca are some of the places.
+A short "how-to" guide for getting to and from your hotel
+ to the workshop related
+locations (Fig.\ref{fig:Oslo}) follows below. Keep in mind that
+the distances
+between the different locations are not very large so if the
+weather is nice, walking is recommended. If needed, taxi's
+are a common sight in Oslo but if none are found you can order one
+at tlf: +47 02323. Note that taxies are expensive in Norway.
+
+\clearpage
+
+\subsection*{\underline{Comfort Hotel Karl Johan}}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+\centering
+\includegraphics[scale=0.2]{img/comfort_karl_johan.jpg}
+\caption{\label{fig:frog1}Exterior of Comfort Hotel Karl Johan.}
+\end{wrapfigure}
+The hotel is located at Karl Johans gate 12 near
+the train station at Jernbanetorget.
+This is also
+a hub for public transportation in Oslo. \textbf{To get to
+Tøyen hovedgård} where the workshop is taking place,
+the best option is to take the subway from Jernbanetorget
+to Tøyen and walk the remaining bit. The subway station
+at Jernbanetorget is located under the shopping centre
+Byporten and the entrances are clearly marked.
+All subway trains,
+\noindent 1-5, go to Tøyen from
+Jernbanetorget in the eastward direction. \textbf{To get from
+the restaurant, Nedre Foss Gård,} you can take the tram. Lines
+11, 12 and 13 will take you from Schous Plass to Jernbanetorget.
+
+
+
+\subsection*{\underline{Scandic Vulkan}}
+\begin{wrapfigure}{r}{0.42\textwidth}
+\centering
+\includegraphics[width=0.45\textwidth, height=0.3\textwidth]{img/scandic-vulkan.jpg}
+\caption{\label{fig:frog1}Exterior of Scandic Vulkan.}
+\end{wrapfigure}
+The hotel is located in Maridalsveien 13.
+\textbf{The best way to get to Scandic Vulkan} from
+Jernbanetorget is by bus. Lines 34 and 54 will take you
+to the bus stop Telthusbakken which is located 100 meters
+north of the hotel. \textbf{To get to Tøyen hovedgård}
+you can take the bus back to Oslo S and from there take
+the subway in the eastward direction to Tøyen. All subway
+lines, 1-5, takes you there. \textbf{The restaurant, Nedre Foss Gård}
+is right across the river from your hotel.
+
+
+
+\clearpage
+\begin{center}
+
+
+%WHAT TO DO
+\section*{What to do in Oslo ?}
+In Oslo there are many different tourist attractions, and we will present a few  popular sites. Attractions in Oslo can be found on \href{www.visitoslo.com}{www.visitoslo.com}.
+
+
+\end{center}
+\begin{wrapfigure}[9]{R}{0.5\textwidth}
+    \centering
+    \captionsetup{width=0.4\textwidth}
+    \includegraphics[width=0.5\textwidth]{img/Vigelansparken.jpg}%
+     \caption{The monolith sculpute in the Park.}
+\end{wrapfigure}
+
+\section*{Vigeland Sculpture Park}
+
+Vigeland Park is the world's largest sculpture park made by a single artist, and is one of Norway's most popular tourist attractions. The unique sculpture park is Gustav Vigeland's lifework with more than 200 sculptures in bronze, granite and wrought iron. The park is located a short 10 minute walk from the subway station Majorstuen.
+
+\begin{wrapfigure}[10]{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/operahouse.jpg}%
+     \caption{Oslo Opera House }
+\end{wrapfigure}
+
+\vspace{1cm}
+
+\section*{Opera House}
+Oslo's Opera House is located right at the harbour, with an angled, white exterior that appears to rise from the water. It invites its visitors to climb its roof and enjoy panoramic views of Oslo and the fjord, all year round. \\
+Large-scale windows at street level provide the public with glimpses of rehearsals and workshop activities. The building's interior is mainly oak, and the main hall is shaped like a horseshoe, reminiscent of classical theatres of the past. The opera is designed by the Norwegian architecture firm Snøhetta, and has received several prestigious awards. You can walk to the Opera House from the Jernbanetorget (central station) in about 15 minutes.
+
+\clearpage
+
+\section*{Gr\"unerløkka}
+Through Oslo, from north to south, runs the river Akerselva. Along the river there are parklands and walking trails, but also remains of Oslo’s industrial history.
+Gr\"unerløkka lies on the east side of the river, behind the old industrial buildings. The former factory district turned fashion hub, with laid-back cafes and galleries galore, Gr\"unerløkka is a colourful mix of old and new decor. Independent boutiques and design shops showcase Oslo’s more alternative side, with 19th-century buildings serving as a picturesque backdrop.
+
+\bigskip
+\bigskip
+
+\begin{figure}[h]
+    \centering
+   \includegraphics[width=1.0\textwidth]{img/Oslo2.png} 
+    \caption{Locations of the 5 workshop related locations in Oslo.}
+    \label{fig:Oslo}
+\end{figure}
+
+
+
+
+\clearpage
+
+
+
+% ABSTRACTS
+\includegraphics[scale=0.3]{img/mat-mn-navn-eng.eps}
+
+
+\section*{Session 1}
+\overview{A sub-voxel perfusion model to estimate capillary wall diffusivity from clinical perfusion MR data}{Timo Koch}{Institute for Modelling Hydraulic and Environmental Systems \\ Universität Stuttgart
+}
+{We propose a new mathematical model to infer capillary leakage coefficients from dynamic susceptibility contrast MRI data. We derive an embedded mixed-dimension flow and transport model for a contrast agent in brain tissue. We further present a magnetic resonance signal model for the considered sequence. This allows modeling MR signal–time curves that can be compared to clinical perfusion MR patient data. The proposed model can be used to infer capillary wall diffusivity. Investigating the example of multiple sclerosis, we conclude that capillary wall diffusivity is a good indicator for characterizing MS lesions.}
+
+
+
+\overview{Tailored in vitro tissue models: Instrumentation \& 3D printing}{Johan Ulrik Lind }{Department of Micro- and Nanotechnology \\
+Technical University of Denmark }
+{Organs-on-chips, microphysiological systems and organoids are emerging stem cell-based tissue models, which aim to replicate essential aspects of human biology in the lab. In addition to serving as improved drug-screening platforms for pre-clinical research, these tissue models provide new opportunities for elucidating tissue development and intercellular communication. Yet, in order to fully to realize their potential, means for tailoring of tissue models towards specific questions, as well as for acquiring data, are needed. Towards these challenges, multi-material 3D printing provides a unique opportunity. As a first step, we have developed a series of customized cardiac tissue models with tailored architectures and embedded soft sensors. The embedded soft electronic sensors allowed us to perform real-time, long-term and higher-throughput studies of tissue development and response to external stimuli. The 3D printed tissue model platforms rely on a range of custom synthetic and biological printing inks that provide a general framework for tailored in vitro biological research. }
+
+\section*{Session 2}
+
+
+
+
+\overview{Curved membrane proteins that recruit actin polymerization: Lamellipodia, protrusions and shape transitions
+}{Nir Gov}{
+Department of Chemical and Biological Physics\\
+Weizmann Institute of Science}
+{
+Membrane proteins, either trans-membrane or adsorbed, can cause a local bending of the membrane, denoted as "spontaneous curvature". Such proteins, usually within a complex of proteins and lipids, curves the membrane due to its shape. However, when such a complex can recruit actin polymerization, there is an additional protrusive force pushing the membrane. The coupling between the local concentration of curved membrane complex and the protrusive forces of the actin cytoskeleton give rise to spontaneous shape transitions of the membrane. We present a theoretical study of this process, using numerical simulations. The shapes we find may shed light on common actin-driven membrane shapes observed in cells, such as the dorsal ruffles and the lamellipodia of motile cells.
+
+}
+
+\overview{
+Rear supracellular contraction drives collective cell chemotaxis}{Roberto Mayor}{Department of Cell and Developmental Biology \\ University College London }
+{
+Collective cell chemotaxis, the directed migration of cell groups along gradients of soluble chemical cues, underlies various developmental and pathological processes. Here we use neural crest cells, a migratory embryonic stem cell population whose behaviour has been likened to malignant invasion, to study collective chemotaxis in vivo. We show that the neural crest exhibits a tensile actomyosin ring at the edge of the migratory cell group that contracts in a supracellular fashion. This contractility is polarized during collective cell chemotaxis: it is inhibited at the front but persists at the rear of the cell cluster. By developing a mathematical model and testing its predictions in vivo, we found that the rear contraction leads to cell intercalation that triggers a wave of cellular flow within the cell cluster.  We show, consistently with the mathematical model, that central cells move forward, but when they reach the front of the cluster they are engaged in a peripheral retrograde movement.  This dynamic cell rearrangement is equivalent to the cytoplasmic movement observed in single cell migration, and therefore we propose that during collective chemotaxis the whole cluster behaves as a single giant cell or “supercell”.
+}
+
+
+
+
+
+\overview{Collective mechanical adaptation of honeybee swarms.}{Orit Peleg}{Computer Science
+BioFrontiers Institute \\University of Colorado.}{Honeybee (Apis mellifera) swarms form large congested tree-hanging clusters made solely of bees attached to each other [1]. How these structures are maintained under the influence of dynamic mechanical forcing is unknown. To address this, we created pendant clusters and subject them to dynamic loads of varying orientation, amplitude, frequency and duration. We find that horizontally shaken clusters adapt by spreading out to form wider, flatter cones that recover their original shape when unloaded. Measuring the response of a cluster to an impulsive pendular excitation shows that flattened cones deform less and relax faster than the elongated ones (that is, they are more stable). Particle-based simulations of a passive assemblage suggest a behavioral hypothesis: individual bees respond to local variations in strain by moving up the strain gradient, which is qualitatively consistent with our observations of individual bee movement during dynamic loading. The simulations also suggest that vertical shaking will not lead to significant differential strains and thus no shape adaptation, which we confirmed experimentally. Together, our findings highlight how a super-organismal structure responds to dynamic loading by actively changing its morphology to improve the collective stability of the cluster at the expense of increasing the average mechanical burden of an individual.} 
+\\\\
+\small{
+[1] Seeley, T. D. Honeybee Democracy (Princeton Univ. Press, Princeton, NJ, 2010).
+}
+
+\section*{Session 3}
+
+\overview{Modelling the cerebral microvasculature across multiple length scales and multiple compartments}{Stephen Payne}{Engineering Science (Biomedical Engineering) \\ University of Oxford
+}
+{
+In our previous work, we have developed a number of different models of the cerebral circulation, from 0D lumped compartment models to highly detailed 3D models of the microcirculation. Through the use of homogenisation techniques we have been able to scale up the microcirculation to a single compartment porous medium model that couples with models of individual penetrating cortical vessels. In the first part of the talk, I will present our current work that expand this through the use of a dual-porosity porous medium model in order to model the cerebral cortex more accurately. This work also directly links to multiple-compartment poro-elastic models, developed by a number of groups, which I will discuss. In the second part of the talk, I will present our current work on bridging the length-scale gap between large vessels (i.e. those that can be individually imaged) and the microcirculation, over which length scales surprisingly little anatomical information is known. I will present our proposed modelling approach and discuss how such whole-brain blood flow models can be validated and used within a patient-specific model, in particular in response to ischaemic stroke
+}
+\overview{Mathematical and computational models for biofluids in the brain and 
+in the eye.}{Marcela Szopos}{Institut de Recherche Mathématique Avancée (IRMA) \\ University of Strasbourg
+}
+{
+The aim of the first part of the lecture is to present our advances in
+developing a mathematical and open-source computational framework for 
+hemodynamic simulations. I will illustrate the capabilities of this 
+framework by applying it to the development of a three-dimensional 
+model for blood flow in the cerebral venous network. In the second 
+part of the talk I will describe our recent efforts towards 
+understanding the fluid-dynamical connections between the eye and the 
+brain and identifying the main factors that influence these 
+connections. This project is motivated by the fact that the eye 
+qualifies as a natural candidate to serve as a window on the brain, 
+thanks to the many similarities between ocular and cerebral physiology 
+in health and disease and to the unique accessibility of the eye to 
+non-invasive measurements.
+}
+
+
+\section*{Session 4}
+
+\overview{Modeling Scaffoldless Vesicle Formation
+}{Susanne Liese$\sp{1}$ , Rossane Rojas$\sp{1}$ , Eva Wenzel$\sp{2}$ , Camilla Raiborg$\sp{2}$, Harald Stenmark$\sp{2}$ , Andreas Carlson$\sp{1}$ 
+}{$\sp{1}$ University of Oslo, Department of Mathematics \\
+$\sp{2}$ Oslo University Hospital, Department of Molecular Cell Biology  }{
+Membrane vesicles are ubiquitous in biology. They serve as compartments to segregate and trans-
+port biological material and play a vital role in cell communication. In eukaryotic cells, the formation
+of endosomal intraluminal vesicles (ILV), is essential for the cell functionality, where encapsulating
+transmembrane proteins and cargo material in vesicles is a critical step in lysosomal protein degrada-
+tion, cargo recycling and exosome release. In general, the formation of vesicles is causes by forces acting
+within the membrane. These forces originate for instance from transmembrane protein, an external
+protein scaffold or the interaction with the surrounding fluid. In the case of ILV formation membrane
+associated proteins are known to cause the membrane deformation. However, the biophysical mecha-
+nism behind the membrane remodeling is not yet understood.
+In our work, we investigated vesicle formation in a coarse-grained model, describing the equilibrium
+shape of a membrane by an elastic two dimensional Helfrich-type sheet. Based on this model we could
+identify a combination of effective transmembrane protein interaction and protein crowding as the
+origin of protein induced membrane deformation.
+}
+
+
+
+
+\overview{Studies of virus replication using cryo-electron tomography and in vitro
+reconstitution.
+}{Lars-Anders Carlson}{     
+Department of Medical Biochemistry and Biophysics \\ Umeå University
+}
+{
+Here I will present some of our studies of virus replication and
+assembly using cryo-electron tomography of cells, and in vitro
+reconstitution using model membranes. We elucidated the assembly pathway
+of HIV-1 using synthetic giant unilamellar vesicles (GUVs), purified
+proteins and purified viral RNAs. These studies revealed how HIV-1
+nucleates the assembly cascade of host protein complexes of the ESCRT
+machinery, and how HIV-1 selectively packages its own, dimeric unspliced
+genomic RNA in the presence of an excess of cellular RNAs. I will
+further show more recent data where we use focussed ion beam milling and
+cryo-electron tomography to study the extensive membrane rearrangements
+in cells infected with positive-sense RNA viruses.
+}
+
+
+\overview{Membrane-mediated pattern formation}{Timon Idema
+}{Department of Bionanoscience \\ TU Delft, The Netherlands}{
+Membranes in living cells adapt a wide variety of continually evolving shapes closely related to their function. These shapes are regulated by curvature-inducing proteins, which also interact via the membrane deformations they impose. We study such membrane-mediated interactions in the globally curved and crowded setting of membranes inside the living cell. We find that the collective action of many proteins can change the overall membrane shape, and lead to the formation of many striking patterns that can be tested both in vivo and in biomimetic soft matter systems.}
+
+
+
+\section*{Session 5}
+
+\overview{Assessing paravascular transport in the brain by partial differential equation (PDE) constrained optimization}{Lars Magnus Valnes$\sp{1}$ Geir Ringstad$\sp{2}$ , Per K.Eide $\sp{2}$ , Sebastian Mitusch$\sp{3}$ ,
+Simon Funke$\sp{3}$ and Kent-Andre Mardal$\sp{1,3}$
+}{$\sp{1}$ University of Oslo, Department of Mathematics\\ 
+$\sp{2}$Oslo University Hospital Rikshospitalet \\
+$\sp{3}$Simula Research Laboratory 
+ }{
+The proposed glymphatic system suggests a new mechanism for waste clearance from the brain, and has sparked new research on Alzheimer's disease where one of the defining features
+is that metabolic waste accumulate within the brain. The glympahtic hypothesis is still controversial, but experimental investigations in rodents as well as novel MRI investigations in humans indicates the existence of such a system. A proper theoretical foundation 
+that explains the fluid transfer mechanisms from first principles is however currently missing.
+In particular, a crucial question in the current debate is how much the system accelerate
+waste clearance when compared to extracellular diffusion alone. Therefore
+we will in this paper evaluate to what extent partial differential constrained optimization methods can be used to identify modeling parameters for glymphatic transport. We assume that the transport can be modeled by a diffusion equation, representing extracellular diffusion and possibly dissipation caused by the glymphatic system. The observations are obtained from novel MRI techniques that
+aim to quantify long-term (hours/days) transfer mechanism in the brain. 
+}
+
+\overview{CSF absorption -the path of least resistance}{
+Karen Støverud}{Department of Radiation Sciences \\  Umeå University }{
+Infusion tests describe the volume-pressure relationship of CSF and are often used to calculate the resistance of CSF outflow via the arachnoid granulations. Over the last ten to 20 years alternative absorptions routes have been proposed. One of them is related to the glymphatics theory. According to this theory some of the CSF is absorbed by the parenchyma where it eventually enters the bloodstream and disappears. In the current study, we evaluate the plausibility of absorption through three different pathways; the arachnoid granulations, the pia mater, and the perivascular space.
+}
+
+
+
+\overview{
+A multiscale computational model for fluid and
+mass transport in the microvasculature}{Federica Laurino$\sp{*\dagger}$ and Paolo Zunino$\sp{*}$}{
+$\sp{*}$Department of Mathematics, Politecnico di Milano, Italy \\
+$\sp{\dagger}$Istituto Italiano di Tecnologia, Genova}
+{
+We present a multiscale model for describing the fluid and mass transport
+in a biological tissue perfused by a microvascular network of arbitrary topology.
+Concerning the fluid dynamics, the model describes the interaction of capillary
+transmural flow with the surrounding interstitial pressure, taking into account
+also the effects of the lymphatic drainage, which are of significant relevance at
+the level of microcirculation. Topological model reduction techniques have been
+successfully applied to the model to overcome the technical difficulties arising
+from the numerical approximation of the coupling between a complex network
+and the surrounding volume. In particular, nonlocal restriction operators that
+combine standard traces with averaging operators have been used to transform
+the 3D problem defined in the vasculature into a a simplified 1D problem, defined on the centerlines of the vessels.
+The model has been then applied to describe the transport of nanocarriers in
+the vascular network, in that they represent one of the most promising innovations for the treatment of complex diseases, such as cancer. With this aim,
+the macroscale model of fluid and mass transport in the microvasculature has
+been combined with mesoscale model for the description of interaction of the
+nanocarriers with the vessel wall.
+
+\begin{center}
+\includegraphics[width=1.0\textwidth]{image1.png} 
+
+\end{center}
+
+}
+
+
+
+
+
+
+\section*{Session 6}
+
+
+
+\overview{Friction-Driven Scission of Membrane Tubes.}{Andrew Callan-Jones}{Laboratoire Matière et Systèmes Complexes \\ Université Paris-Diderot}{
+ Membrane scission is essential for intracellular trafficking. While curved BAR domain proteins such as endophilin have been reported to be
+ involved in dynamin-independent scission of tubular membrane necks, the cutting mechanism remained unknown. In this talk, I will present 
+recent work, combining a theoretical model, in vitro, and in vivo experiments, that reveals how a protein scaffold – a rigid sleeve made up of these
+ proteins – can cut tubular membranes connected to a quasi-flat membrane reservoir. We found that the scaffold – which assembles from protein
+ subunits in solution onto the tube and near the junction with the reservoir – bound to the underlying tube creates a frictional barrier for lipid diffusion; 
+tube elongation thus builds up local membrane tension until the membrane undergoes scission through lysis.  As I will discuss, the lysis step was
+ modeled as a stochastic pore nucleation event at the scaffold/bare tube boundary that leads to scission. We call this mechanism friction-driven scission (FDS). In cells, motors
+ pull tubes, in particular during endocytosis. Through reconstitution, we showed that motors can not only pull out and extend protein-scaffolded tubes, but also cut them by FDS. }
+
+
+
+
+
+
+\overview{The role of membrane shape fluctuations in cell adhesion}{Josip Augustin Jane\v{s}$\sp{1,2}$ and Ana-Sun\v{c}ana Smith$\sp{1,2}$ 
+}{$\sp{1}$PULS Group, Institut f\"{o}r Theoretische Physik and Cluster of Excellence: \\ Engineering of Advanced Materials,
+Friedrich Alexander Universit\"{a}t, Germany \\
+$\sp{2}$ Institut Ruder Bošković, Croatia}{
+In embryogenesis, vertebrate cells assemble into organized tissues. In metastatic cancer, cells spreading in the circulatory system build cell-cell contacts with the surrounding tissue to establish new tumors. At the root of these life-forming or life-threatening biological phenomena is cell adhesion, the binding of a biological cell to other cells or to extracellular matrix. The most obvious fundamental question to ask is then as follows: What factors control or govern cell adhesion? For a long time, the paradigmatic answer to this question was that specific protein molecules embedded in the cell wall (or membrane) were responsible for cell adhesion, in either a key-lock fashion (in cell-cell
+adhesion) or a suction-cup fashion (in cell-matrix adhesion). But, a new realization has emerged during the past two decades that physical mechanisms, promoted by the cell membrane, play an unavoidable, yet not fully understood role. Although these physical elements, namely membrane
+fluctuations and ability to change shape, do not at all depend on any specific proteins, they can have
+a major impact on the protein-mediated adhesion, and can be viewed as mechanism that controls
+the binding affinity to the cell-adhesion molecules. In my talk I will show how these mechanisms
+can be studied in mimetic models both experimentally and theoretically, the result of which will be
+discussed in the cellular context.
+}
+
+
+
+
+
+\end{document}

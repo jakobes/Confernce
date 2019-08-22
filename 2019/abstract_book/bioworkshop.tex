@@ -151,21 +151,6 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \newcommand{\eventblock}[5]{
 \node [#1,#2] (#3) {#4};
 \node [time#1,left= of #3] (Time) {#5 }  ;  }
@@ -178,22 +163,21 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 \eventblock{red}{}{Friday}{Program \\ Friday August 30 }{}
 \eventblock{blue}{below= of Friday}{Registration}{Registration with coffee and pastry}{09.30\\(09:30)}
 \eventblock{red}{below= of Registration}{Opening}{Opening}{09.45\\(09:45)}
-\eventblock{blue}{below= of Opening}{SessionOne}{Paul Dommersnes\\
-Amin Doostmohammadi}{S1 \\ 10.00\\(10:00)}
+\eventblock{blue}{below= of Opening}{SessionOne}{Paul Dommersnes\\Amin Doostmohammadi}{S1 \\ 10.00\\(10:00)}
 \eventblock{red}{below= of SessionOne}{BreakOne}{Break with coffee and softdrinks}{10.50\\(11:00)}
-\eventblock{blue2}{below= of BreakOne}{SessionTwo}{Paolo Zunino\\ Alessandro Colcite\\Federico Fenarilo(?)}{S2 \\ 11.10\\(11:20)}
+\eventblock{blue2}{below= of BreakOne}{SessionTwo}{Paolo Zunino\\ Alessandro Coclite\\Federico Fenarilo(?)}{S2 \\ 11.10\\(11:20)}
 \eventblock{red}{below= of SessionTwo}{Lunch}{Lunch}{12.25\\(12:50)}
 \eventblock{blue}{below= of Lunch}{SessionThree}{Jaques Prost\\Susanne Liese}{S3 \\ 13.30\\(13:50)}
 \eventblock{red}{below= of SessionThree}{BreakTwo}{Break with coffee and fruits}{14.20\\(15:20)}
-\eventblock{blue2}{below= of BreakTwo}{SessionFour}{Kartik Jain\\Hunter King\\Corinna Maass}{S4 \\ 14.40\\(15:40)}
+\eventblock{blue2}{below= of BreakTwo}{SessionFour}{Kaare hartvig-Jensen\\Hunter King\\Corinna Maass}{S4 \\ 14.40\\(15:40)}
 \eventblock{red}{below= of SessionFour}{Social}{Social gathering with snacks, beer and wine.}{15.55\\(17:00)}
 \eventblock{blue}{below= of Social}{Dinner}{Workshop dinner at \\ Solsiden}{19.00\\(19:00)}
-
-
 \eventblock{red}{right=2cm of Friday}{Saturday}{Program \\ Saturday August 31 }{}
 \eventblock{blue2}{below= of Saturday}{SessionFive}{Jakob Schreiner\\ Vegard Vinje\\Alain Goriley }{S5 \\ 09.30\\(09:30)}
 \eventblock{red}{below= of SessionFive}{BreakThree}{Break with coffee, croissants and softdrinks}{  10.45\\(11:00)}
-\eventblock{blue2}{below= of BreakThree}{SessionSix}{Kaare Hartvig-Jensen\\NN (Cinzia Progida)\\ Emma L\aa ng }{S6 \\ 11.05\\(11:20)}
+
+\eventblock{blue2}{below= of BreakThree}{SessionSix}{Kartik Jain\\NN (Cinzia Progida)\\ Emma L\aa ng }{S6 \\ 11.05\\(11:20)}
+
 \eventblock{red}{below= of SessionSix}{LunchTwo}{Lunch}{12.20\\(12:50)}
 \eventblock{blue}{below= of LunchTwo}{Tour}{Guided Tour Botanical Garden }{13.30\\(13:50)}
 
@@ -390,7 +374,27 @@ Journal, 6:464–478, 2019.}}
 \newpage
 \section*{Session 2}
 
-% \overview{}{Paolo Zunino}{}{}
+\overview{Mathematical modeling and simulations in nanomedicine}
+{F. Laurino, A. Coclite, P. Decuzzi, P. Zunino}{}
+{In the field of Nanomedicine, there is a pressing need for predictive, quantitative tools
+to rationally design and optimize nanocarriers for therapeutic and imaging applications.
+Current nano/micro-fabrication technologies allow us to control a large number of parameters,
+including the size, shape surface properties and mechanical stiffness. These design parameters
+affect the biophysical behaviour of nanomedicines in terms of blood longevity, tissue deposition,
+drug release, contrast imaging amplification and more. Thus, sophisticated, multiscale and multiphysics
+computational models are needed to predict the behaviour of nanomedicines and guide the fabrication
+process towards optimal delivery systems.
+
+This work is a first step towards the realization of fully integrated simulation platform.
+A computational model for describing blood flow in the microvasculature, nanoparticle
+transport and molecular interaction with the vascular walls is presented. The model predicts
+nanoparticle deposition within a tumor microvasculature as a function of different design parameters.
+
+The simulations show that there is a complex interaction between the morphology of the vascular network,
+the particle surface and mechanical properties, and the particle deposition on the vascular walls.
+Specifically, the computational model shows and provides interpretation of how the stiffness
+affects significantly the probability of adhesion onto the vascular walls and the distribution
+along the network of blood-born nanomedicines.}
 
 \overview{A Lattice-Boltzmann-Immersed Boundary technique for computing the vascular journey of micro-particles}
 {Allesandro Coclite}
